@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+
+  tccrest:
+    image: tccrest
+    ports:
+      - '8085:8085'
+    environment: 
+      - TZ=Africa/Johannesburg
+    volumes:
+      - logs://home/logs/tcc/
+      - tomcatlogs://opt/jars/tcc-rest-api/tcc_logback_log
+      - tomcatLogs2://opt/jars/tcc-rest-api/tomcat
+    deploy:
+      replicas: 4
+
+volumes:
+  logs:
+  tomcatlogs:
+  tomcatLogs2:

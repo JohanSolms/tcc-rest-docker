@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Start-Class: za.co.nupay.tcc_debicheck_rest.TccDebicheckRestApplicatio
+ n
+Main-Class: org.springframework.boot.loader.WarLauncher
+
